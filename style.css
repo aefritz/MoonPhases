@@ -1,0 +1,68 @@
+h1 {
+  color: white;
+}
+body {
+  display: flex;
+  justify-content: center;
+  background: black;
+}
+div {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  background: black;
+  margin-top: 100px;
+  width: 600px;
+  height: 200px;
+  border: 1px solid black;
+  position: relative;
+  display: flex;
+  align-content: center;
+}
+#circle1 {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background: black;
+  position: absolute;
+  z-index: 1;
+}
+#circle2 {
+  background: white;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  animation-name: moon;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+}
+@keyframes moon {
+  0% {
+    left: 0px;
+    width: 198px;
+    height: 198px;
+  }
+  50% {
+    width: 200px;
+    height: 200px;
+  }
+  100% {
+    left: 400px;
+    width: 198px;
+    height: 198px;
+  }
+}
+#circle3 {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background: black;
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  left: 400px;
+}
